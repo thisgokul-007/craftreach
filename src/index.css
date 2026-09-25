@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-warm: #FAF7F2;
+    --text-charcoal: #1C1917;
+    --accent-terracotta: #C85A32;
+    --accent-gold: #D4AF37;
+    --accent-brown: #582C12;
+    --card-white: #FFFFFF;
+  }
+
+  body {
+    background-color: #FAF7F2;
+    color: #1C1917;
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Tamil', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  h1, h2, h3, .font-serif-craft {
+    font-family: 'Cinzel', 'Playfair Display', 'Noto Sans Tamil', serif;
+  }
+}
+
+/* Custom Utilities */
+.bg-warm-ivory {
+  background-color: #FAF7F2;
+}
+
+.text-terracotta {
+  color: #C85A32;
+}
+
+.bg-terracotta {
+  background-color: #C85A32;
+}
+
+.border-terracotta {
+  border-color: #C85A32;
+}
+
+.text-gold {
+  color: #D4AF37;
+}
+
+.bg-gold {
+  background-color: #D4AF37;
+}
+
+.border-gold {
+  border-color: #D4AF37;
+}
+
+.bg-earth-brown {
+  background-color: #582C12;
+}
+
+.text-earth-brown {
+  color: #582C12;
+}
+
+/* Glassmorphism & Cards */
+.craft-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  box-shadow: 0 10px 30px -5px rgba(88, 44, 18, 0.05), 0 4px 12px -2px rgba(200, 90, 50, 0.03);
+}
+
+.craft-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.craft-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -10px rgba(88, 44, 18, 0.1), 0 8px 16px -4px rgba(200, 90, 50, 0.06);
+  border-color: rgba(200, 90, 50, 0.3);
+}
+
+/* AI Scanner Animation */
+@keyframes laserScan {
+  0% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  50% {
+    top: 98%;
+    opacity: 1;
+  }
+  100% {
+    top: 0%;
+    opacity: 0.8;
+  }
+}
+
+.animate-laser-scan {
+  animation: laserScan 2.5s ease-in-out infinite;
+}
+
+/* Pulse Glow Animation */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(200, 90, 50, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.6);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Floating Particles */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-15px) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px) rotate(360deg);
+    opacity: 0.7;
+  }
+}
+
+.animate-float-particle {
+  animation: floatUp 4s ease-in-out infinite;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37 / 40%;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C85A32;
+}
